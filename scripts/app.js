@@ -1,71 +1,3 @@
-// var date = [];
-// var jsdate = [];
-// var yeni_vaka_sayisi = [];
-// var yeni_olum_sayisi = [];
-// var yeni_test_sayisi = [];
-// var toplam_vaka_sayisi = [];
-// var toplam_olum_sayisi = [];
-// var toplam_test_sayisi = [];
-// var oran_sayisi = [];
-// var aktif_vaka_sayisi = [];
-// var entube_hasta_sayisi = [];
-// var yogun_bakim_sayisi = [];
-// var yeni_iyilesen_sayisi = [];
-// var toplam_iyilesen_sayisi = [];
-
-// window.onload = function () {
-//     $.getJSON('https://raw.githubusercontent.com/ozanerturk/covid19-turkey-api/master/dataset/timeline.json', function (data) {
-//         data = Object.values(data);
-//         data.forEach((corona) => {
-//             date.push(corona.date);
-//             var dateParts = corona.date.split("/");
-//             var dateObject = new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]);
-//             jsdate.push(dateObject);
-//             yeni_vaka_sayisi.push(corona.cases);
-//             yeni_olum_sayisi.push(corona.deaths);
-//             yeni_test_sayisi.push(corona.tests);
-//             toplam_vaka_sayisi.push(corona.totalCases);
-//             toplam_olum_sayisi.push(corona.totalDeaths);
-//             toplam_test_sayisi.push(corona.totalTests);
-//             var oran = (Number(corona.cases) / Number(corona.tests)) * 100;
-//             if (oran === Infinity || isNaN(oran)) {
-//                 oran = 0;
-//             }
-//             oran_sayisi.push(oran);
-//             aktif_vaka_sayisi.push(Number(corona.totalCases) - Number(corona.totalDeaths) - Number(corona.totalRecovered));
-//             if (corona.totalIntubated) {
-//                 entube_hasta_sayisi.push(corona.totalIntubated);
-//             } else {
-//                 entube_hasta_sayisi.push(corona.critical)
-//             }
-//             if (corona.totalIntensiveCare) {
-//                 yogun_bakim_sayisi.push(corona.totalIntensiveCare);
-//             } else {
-//                 yogun_bakim_sayisi.push(Math.floor((Number(corona.totalCases) - Number(corona.totalDeaths) - Number(corona.totalRecovered)) / Number(corona.pneumoniaPercent.toString().slice(1).replace(/,/g, '.'))));
-//             }
-//             yeni_iyilesen_sayisi.push(corona.recovered);
-//             toplam_iyilesen_sayisi.push(corona.totalRecovered);
-//         });
-//         dailyCasesAndDeaths();
-//         totalRecoveredAndActiveCases();
-//         dailyCases();
-//         dailyDeaths();
-//         criticalCases();
-//         pneumonia();
-//         dailyTests();
-//         totalTests();
-//         totalCases();
-//         totalDeaths();
-//         caseRate();
-//         activeCases();
-//         dailyRecovered();
-//         totalRecovered();
-//     });
-// };
-// // var loc = window.location.href + '';
-// // if (loc.indexOf('http://') == 0) {
-// //     window.location.href = loc.replace('http://', 'https://');
-// // }
 var date = [];
 var yeni_vaka_sayisi = [];
 var yeni_olum_sayisi = [];
@@ -125,7 +57,7 @@ window.onload = function () {
                 oran = 0;
             }
             oran_sayisi.push(oran);
-            aktif_vaka_sayisi.push(totalCaseCount - Number(corona.totalDeaths) - Number(corona.totalRecovered));
+            aktif_vaka_sayisi.push(Number(corona.totalPatients) - Number(corona.totalDeaths) - Number(corona.totalRecovered));
             if (corona.totalIntubated) {
                 entube_hasta_sayisi.push(corona.totalIntubated);
             } else {
@@ -140,17 +72,17 @@ window.onload = function () {
             toplam_iyilesen_sayisi.push(corona.totalRecovered);
         });
         dailyCasesAndDeaths();
-        totalRecoveredAndActiveCases();
+        // totalRecoveredAndActiveCases();
         dailyCases();
         dailyDeaths();
-        criticalCases();
-        pneumonia();
+        // criticalCases();
+        // pneumonia();
         dailyTests();
         totalTests();
         totalCases();
         totalDeaths();
         caseRate();
-        activeCases();
+        // activeCases();
         dailyRecovered();
         totalRecovered();
     });

@@ -73,7 +73,7 @@ caseRate = function () {
                 autoSelected: 'zoom'
             }
         },
-        colors: ['#0000ff'],
+        colors: ['#743861'],
         dataLabels: {
             enabled: false
         },
@@ -188,7 +188,7 @@ dailyCases = function () {
                 autoSelected: 'zoom'
             }
         },
-        colors: ['#0000ff'],
+        colors: ['#2B8CBE'],
         dataLabels: {
             enabled: false
         },
@@ -259,7 +259,7 @@ dailyCasesAndDeaths = function () {
                 opacity: 0.2
             },
         },
-        colors: ['#0000ff', '#ff0000'],
+        colors: ['#2B8CBE', '#A2425D'],
         dataLabels: {
             enabled: false,
         },
@@ -315,7 +315,7 @@ dailyDeaths = function () {
                 autoSelected: 'zoom'
             }
         },
-        colors: ['#ff0000'],
+        colors: ['#A2425D'],
         dataLabels: {
             enabled: false
         },
@@ -371,7 +371,7 @@ dailyRecovered = function () {
                 autoSelected: 'zoom'
             }
         },
-        colors: ['#0000ff'],
+        colors: ['#63C483'],
         dataLabels: {
             enabled: false
         },
@@ -427,7 +427,7 @@ dailyTests = function () {
                 autoSelected: 'zoom'
             }
         },
-        colors: ['#0000ff'],
+        colors: ['#1F555A'],
         dataLabels: {
             enabled: false
         },
@@ -539,7 +539,7 @@ totalCases = function () {
                 autoSelected: 'zoom'
             }
         },
-        colors: ['#0000ff'],
+        colors: ['#2B8CBE'],
         dataLabels: {
             enabled: false
         },
@@ -595,7 +595,7 @@ totalDeaths = function () {
                 autoSelected: 'zoom'
             }
         },
-        colors: ['#ff0000'],
+        colors: ['#A2425D'],
         dataLabels: {
             enabled: false
         },
@@ -723,7 +723,7 @@ totalRecovered = function () {
                 autoSelected: 'zoom'
             }
         },
-        colors: ['#ff0000'],
+        colors: ['#63C483'],
         dataLabels: {
             enabled: false
         },
@@ -779,7 +779,7 @@ totalTests = function () {
                 autoSelected: 'zoom'
             }
         },
-        colors: ['#ff0000'],
+        colors: ['#1F555A'],
         dataLabels: {
             enabled: false
         },

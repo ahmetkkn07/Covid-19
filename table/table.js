@@ -103,9 +103,9 @@ function tabloCiz() {
         var td6 = document.createElement('td');
         var td7 = document.createElement('td');
         var td8 = document.createElement('td');
-        var td9 = document.createElement('td');
-        var td10 = document.createElement('td');
-        var td11 = document.createElement('td');
+        // var td9 = document.createElement('td');
+        // var td10 = document.createElement('td');
+        // var td11 = document.createElement('td');
         var td12 = document.createElement('td');
         var td13 = document.createElement('td');
 
@@ -117,9 +117,9 @@ function tabloCiz() {
         var text6 = document.createTextNode(toplam_olum_sayisi[i]);
         var text7 = document.createTextNode(toplam_test_sayisi[i]);
         var text8 = document.createTextNode(oran_sayisi[i].toString().substring(0, 4));
-        var text9 = document.createTextNode(aktif_vaka_sayisi[i]);
-        var text10 = document.createTextNode(entube_hasta_sayisi[i]);
-        var text11 = document.createTextNode(yogun_bakim_sayisi[i]);
+        // var text9 = document.createTextNode(aktif_vaka_sayisi[i]);
+        // var text10 = document.createTextNode(entube_hasta_sayisi[i]);
+        // var text11 = document.createTextNode(yogun_bakim_sayisi[i]);
         var text12 = document.createTextNode(yeni_iyilesen_sayisi[i]);
         var text13 = document.createTextNode(toplam_iyilesen_sayisi[i]);
 
@@ -131,9 +131,9 @@ function tabloCiz() {
         td6.appendChild(text6);
         td7.appendChild(text7);
         td8.appendChild(text8);
-        td9.appendChild(text9);
-        td10.appendChild(text10);
-        td11.appendChild(text11);
+        // td9.appendChild(text9);
+        // td10.appendChild(text10);
+        // td11.appendChild(text11);
         td12.appendChild(text12);
         td13.appendChild(text13);
         tr.appendChild(td1);
@@ -144,9 +144,9 @@ function tabloCiz() {
         tr.appendChild(td6);
         tr.appendChild(td7);
         tr.appendChild(td8);
-        tr.appendChild(td9);
-        tr.appendChild(td10);
-        tr.appendChild(td11);
+        // tr.appendChild(td9);
+        // tr.appendChild(td10);
+        // tr.appendChild(td11);
         tr.appendChild(td12);
         tr.appendChild(td13);
 
