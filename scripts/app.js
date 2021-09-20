@@ -39,14 +39,15 @@ window.onload = function () {
             }
             yeni_olum_sayisi.push(corona.deaths);
             yeni_test_sayisi.push(corona.tests);
-            if (control) {
-                toplam_vaka_sayisi.push(lastTotalCase);
-            }
-            else {
-                toplam_vaka_sayisi.push(corona.totalPatients);
-            }
-            toplam_olum_sayisi.push(corona.totalDeaths);
-            toplam_test_sayisi.push(corona.totalTests);
+            // if (control) {
+            //     toplam_vaka_sayisi.push(lastTotalCase);
+            // }
+            // else {
+            //     toplam_vaka_sayisi.push(corona.totalPatients);
+            // }
+            // toplam_olum_sayisi.push(corona.totalDeaths);
+            // ! Yavaş çalıştığı için yorumlandı
+            // toplam_test_sayisi.push(corona.totalTests);
             if (corona.cases) {
                 var oran = (Number(corona.cases) / Number(corona.tests)) * 100;
             }
@@ -57,34 +58,36 @@ window.onload = function () {
                 oran = 0;
             }
             oran_sayisi.push(oran);
-            aktif_vaka_sayisi.push(Number(corona.totalPatients) - Number(corona.totalDeaths) - Number(corona.totalRecovered));
-            if (corona.totalIntubated) {
-                entube_hasta_sayisi.push(corona.totalIntubated);
-            } else {
-                entube_hasta_sayisi.push(corona.critical)
-            }
-            if (corona.totalIntensiveCare) {
-                yogun_bakim_sayisi.push(corona.totalIntensiveCare);
-            } else {
-                yogun_bakim_sayisi.push(Math.floor((totalCaseCount - Number(corona.totalDeaths) - Number(corona.totalRecovered)) / Number(corona.pneumoniaPercent.toString().slice(1).replace(/,/g, '.'))));
-            }
+            // ! Sağlık Bakanlığının yeni verilerinde olmadığı için yorumlandı
+            // aktif_vaka_sayisi.push(Number(corona.totalPatients) - Number(corona.totalDeaths) - Number(corona.totalRecovered));
+            // if (corona.totalIntubated) {
+            //     entube_hasta_sayisi.push(corona.totalIntubated);
+            // } else {
+            //     entube_hasta_sayisi.push(corona.critical)
+            // }
+            // if (corona.totalIntensiveCare) {
+            //     yogun_bakim_sayisi.push(corona.totalIntensiveCare);
+            // } else {
+            //     yogun_bakim_sayisi.push(Math.floor((totalCaseCount - Number(corona.totalDeaths) - Number(corona.totalRecovered)) / Number(corona.pneumoniaPercent.toString().slice(1).replace(/,/g, '.'))));
+            // }
+            // toplam_iyilesen_sayisi.push(corona.totalRecovered);
             yeni_iyilesen_sayisi.push(corona.recovered);
-            toplam_iyilesen_sayisi.push(corona.totalRecovered);
         });
         dailyCasesAndDeaths();
         // totalRecoveredAndActiveCases();
-        dailyCases();
-        dailyDeaths();
+        // dailyCases();
+        // dailyDeaths();
         // criticalCases();
         // pneumonia();
-        dailyTests();
-        totalTests();
-        totalCases();
-        totalDeaths();
+        // dailyTests();
+        // totalTests();
+        // totalCases();
+        // totalDeaths();
         caseRate();
+        // totalCasesAndDeaths();
         // activeCases();
-        dailyRecovered();
-        totalRecovered();
+        // dailyRecovered();
+        // totalRecovered();
     });
 };
 var loc = window.location.href + '';

@@ -73,7 +73,7 @@ caseRate = function () {
                 autoSelected: 'zoom'
             }
         },
-        colors: ['#743861'],
+        colors: ['#2B8CBE'],
         dataLabels: {
             enabled: false
         },
@@ -296,6 +296,79 @@ dailyCasesAndDeaths = function () {
     var chart = new ApexCharts(document.querySelector("#dailyCasesAndDeaths"), options);
     chart.render();
 }
+// ! Yeni eklendi
+totalCasesAndDeaths = function () {
+    var options = {
+        series: [
+            {
+                name: "Toplam Hasta",
+                data: toplam_vaka_sayisi
+            },
+            {
+                name: "Toplam Vefat",
+                data: toplam_olum_sayisi
+            }
+        ],
+        chart:
+        {
+            type: 'line',
+            stacked: false,
+            height: 350,
+            zoom: {
+                type: 'x',
+                enabled: true,
+                autoScaleYaxis: true
+            },
+            toolbar: {
+                autoSelected: 'zoom'
+            },
+            dropShadow: {
+                enabled: true,
+                color: '#000',
+                top: 18,
+                left: 7,
+                blur: 10,
+                opacity: 0.2
+            },
+        },
+        colors: ['#2B8CBE', '#A2425D'],
+        dataLabels: {
+            enabled: false,
+        },
+        stroke: {
+            curve: 'smooth'
+        },
+        grid: {
+            borderColor: '#e7e7e7',
+            row: {
+                colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+                opacity: 0.5
+            },
+        },
+        markers: {
+            size: 0
+        },
+        xaxis: {
+            categories: date,
+        },
+        yaxis: [
+            {
+                title: {
+                    text: 'Toplam Hasta Sayısı'
+                },
+
+            },
+            {
+                title: {
+                    text: 'Toplam Vefat Sayısı'
+                },
+                opposite: true,
+            }],
+    };
+    var chart = new ApexCharts(document.querySelector("#totalCasesAndDeaths"), options);
+    chart.render();
+}
+// !
 dailyDeaths = function () {
     var options = {
         series: [{
